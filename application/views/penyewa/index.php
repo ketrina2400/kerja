@@ -114,6 +114,11 @@
         </div>
         <div class="row align-items-stretch mb-5">
             <div class="col-md-6">
+                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
+                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
                 <div class="form-group">
                     <h5 class="section-subheading text-white">ALamat : Jember, Jawa Timur</h5>
                 </div>
@@ -132,11 +137,6 @@
                         <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
-                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

@@ -11039,7 +11039,7 @@ img::-moz-selection {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	/*background-color: #212529;*/
-	background-color: #862A5C;
+	background-color: rgb(12, 1, 167);
 }
 
 #mainNav .navbar-toggler {
