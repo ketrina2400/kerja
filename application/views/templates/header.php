@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Agency - Start Bootstrap Theme</title>
+    <title><?= $title ?></title>
     <link rel="icon" type="image/x-icon" href="<?= base_url() ?>assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
@@ -29,10 +29,10 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
 
                 <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Daftar</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Masuk</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Pusat Bantuan</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#page-top">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Daftar</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Masuk</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Pusat Bantuan</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                 </ul>
 

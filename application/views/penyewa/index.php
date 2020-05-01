@@ -92,7 +92,11 @@
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading"><?= $tb['namakos'] ?></div>
-                            <div class="portfolio-caption-subheading text-muted"><?= $tb['khususkos'] ?></div>
+                            <div class="portfolio text-uppercase"><?php if ($tb['khususkos'] == 1) {
+                                                                        echo '<span class="badge badge-success">Putra</span>';
+                                                                    } else {
+                                                                        echo '<span class="badge badge-info">Putri</span>';
+                                                                    }  ?></div>
                             <div class="portfolio-caption-subheading text-muted"><?= $tb['alamatkos'] ?></div>
                         </div>
                     </div>
