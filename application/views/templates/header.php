@@ -22,7 +22,8 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger d-flex" href="#page-top"><img src="<?= base_url(); ?>assets/img/navbar-logo.svg" />
+            <a class="navbar-brand js-scroll-trigger d-flex" href="#page-top">
+                <!-- <img src="assets/img/navbar-logo.svg" /> -->
                 <h5 class="ml-2">KOST</h5>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>

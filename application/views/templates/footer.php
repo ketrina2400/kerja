@@ -2,7 +2,7 @@
  <footer class="footer py-4">
      <div class="container">
          <div class="row align-items-center">
-             <div class="col-lg-4 text-lg-left">Copyright © Your Website <script>
+             <div class="col-lg-4 text-lg-left">Copyright © Kost <script>
                      var CurrentYear = new Date().getFullYear()
                      document.write(CurrentYear)
                  </script>

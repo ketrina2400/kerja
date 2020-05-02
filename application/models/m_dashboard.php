@@ -5,7 +5,7 @@ class m_dashboard extends CI_Model
 {
     public function select_by_user()
     {
-        $sql = "SELECT * FROM datakos";
+        $sql = "SELECT * FROM `tipekamar`, `datakos` WHERE tipekamar.id_kos = datakos.id_kos";
 
         $data = $this->db->query($sql);
 

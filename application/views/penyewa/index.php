@@ -88,11 +88,14 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="<?= base_url(); ?>assets/img/foto_kos/<?= $tb['fotokos']; ?>" alt="" />
+                            <img class="img-fluid" src="<?= base_url(); ?>assets/img/foto_kos/<?= $tb['fotokamar']; ?>" alt="" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading"><?= $tb['namakos'] ?></div>
-                            <div class="portfolio text-uppercase"><?php if ($tb['khususkos'] == 1) {
+                            <div class="portfolio-caption-heading">
+                                <h6 class="text-uppercase">RP. <strong><?= $tb['harga'] ?></strong> / bulan</h6>
+                            </div>
+                            <div class="portfolio text-uppercase"><?php if ($tb['khususkos'] == 'putra') {
                                                                         echo '<span class="badge badge-success">Putra</span>';
                                                                     } else {
                                                                         echo '<span class="badge badge-info">Putri</span>';
@@ -112,13 +115,8 @@
             <h2 class="section-heading text-uppercase">Tentang Kami</h2>
             <h3 class="section-subheading text-white">Aplikasi ini adalah aplikasi yang membantu mahasiswa untuk mencari tempat tinggal sementara khususnya mahasiswa jember</h3>
         </div>
-        <div class="row align-items-stretch mb-5">
-            <div class="col-md-6">
-                <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 200px">
-                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="col-md-6">
+        <div class="row align-items-stretch mb-5 text-center">
+            <div class="col-md-12 text-center">
                 <div class="form-group">
                     <h5 class="section-subheading text-white">ALamat : Jember, Jawa Timur</h5>
                 </div>
@@ -131,12 +129,10 @@
                 <div class="form-group">
                     <h5 class="section-subheading text-white">Ikuti Akun Social Media Kami</h5>
                 </div>
-                <div class="form-group mb-md-0">
-                    <div class="col-md-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="form-group text-center">
+                    <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social" href="#!"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
@@ -147,15 +143,19 @@
 <?php
 foreach ($kos as $p) :
     $id = $p['id_kos'];
+    $id_k = $p['id_kamar'];
     $nama = $p['namakos'];
-    $foto = $p['fotokos'];
+    $foto = $p['fotokamar'];
     $khusus = $p['khususkos'];
     $alamat = $p['alamatkos'];
     $fasilitas = $p['fasilitaskos'];
     $lingkungan = $p['lingkungankos'];
     $peraturan = $p['peraturankos'];
+    $ukuran = $p['ukuran'];
+    $tampung = $p['penghuni'];
+    $harga = $p['harga'];
 
-    $query_user = "SELECT * FROM datakos WHERE id_kos = $id";
+    $query_user = "SELECT * FROM tipekamar, datakos WHERE datakos.id_kos = tipekamar.id_kos";
     $data_user = $this->db->query($query_user)->result_array();
 ?>
     <div class="portfolio-modal modal fade" id="detailKos_<?= $id; ?>" tabindex="-1" role="dialog" aria-hidden="true">
@@ -170,8 +170,9 @@ foreach ($kos as $p) :
                                 <h2 class="text-uppercase"><?= $nama; ?></h2>
                                 <p class="item-intro text-muted">Deskripsi tempat kos</p>
                                 <img class="img-fluid d-block mx-auto" src="<?= base_url(); ?>assets/img/foto_kos/<?= $foto; ?>" alt="" />
-                                <div class="text-uppercase">
-                                    <?php if ($khusus == 1) {
+                                <p class="item-intro text-uppercase">RP. <strong><?= $harga; ?></strong> / bulan</p>
+                                <div class="item-intro text-uppercase">
+                                    <?php if ($khusus == 'putra') {
                                         echo '<span class="badge badge-success">Putra</span>';
                                     } else {
                                         echo '<span class="badge badge-info">Putri</span>';
@@ -182,6 +183,8 @@ foreach ($kos as $p) :
                                     <li>Fasilitas Kos: <?= $fasilitas; ?></li>
                                     <li>Alamat: <?= $alamat; ?></li>
                                     <li>Lingkungan: <?= $lingkungan; ?></li>
+                                    <li>Ukuran kamar: <?= $ukuran; ?></li>
+                                    <li>Daya tampung: <?= $tampung; ?></li>
                                 </ul>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                             </div>

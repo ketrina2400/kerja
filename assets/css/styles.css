@@ -11038,8 +11038,7 @@ img::-moz-selection {
 #mainNav {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	/*background-color: #212529;*/
-	background-color: rgb(12, 1, 167);
+	background-color: #224ABE;
 }
 
 #mainNav .navbar-toggler {
@@ -11098,7 +11097,7 @@ img::-moz-selection {
 	#mainNav.navbar-shrink {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		background-color: rgb(12, 1, 167);
+		background-color: #224ABE;
 	}
 
 	#mainNav.navbar-shrink .navbar-brand {
@@ -11472,7 +11471,7 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-	background-color: rgb(12, 1, 167);
+	background-color: #224ABE;
 	background-image: url("../img/map-image.png");
 	background-repeat: no-repeat;
 	background-position: center;
