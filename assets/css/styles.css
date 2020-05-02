@@ -18,12 +18,17 @@
 	box-sizing: border-box;
 }
 
-html {
+html,
+body {
 	font-family: sans-serif;
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin: 0;
+	padding: 0;
 }
+
+
 
 article,
 aside,
@@ -6662,6 +6667,90 @@ a.close.disabled {
 	color: #212529;
 }
 
+
+/* Carousel */
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.carousel,
+.item,
+.active {
+	height: 100%;
+}
+
+.carousel-inner {
+	height: 100%;
+}
+
+.carousel {
+	margin-bottom: 60px;
+}
+
+.carousel-caption {
+	z-index: 10;
+}
+
+.carousel .item {
+	background-color: #777;
+}
+
+.carousel .carousel-inner .bg1::after {
+	content: '';
+	background-size: cover;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(rgba(233, 220, 100, 0.2), rgba(0, 0, 0, 0.8));
+	position: absolute;
+	z-index: 9;
+}
+
+.carousel .carousel-inner .bg2::after {
+	content: '';
+	background-size: cover;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(rgba(233, 220, 100, 0.2), rgba(0, 0, 0, 0.8));
+	position: absolute;
+	z-index: 9;
+}
+
+.carousel .carousel-inner .bg3::after {
+	content: '';
+	background-size: cover;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(rgba(233, 220, 100, 0.2), rgba(15, 14, 14, 0.6));
+	position: absolute;
+	z-index: 9;
+}
+
+.carousel .carousel-inner .bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.carousel .carousel-inner .bg1 {
+	background-image: url('../img/kos2.jpg');
+	background-position: center top;
+}
+
+.carousel .carousel-inner .bg2 {
+	background-image: url('../img/kos1.jpg');
+	background-position: center center;
+}
+
+.carousel .carousel-inner .bg3 {
+	background-image: url('../img/kos3.jpg');
+	background-position: center bottom;
+}
+
 .carousel {
 	position: relative;
 }
@@ -6757,6 +6846,7 @@ a.close.disabled {
 	text-align: center;
 	opacity: 0.5;
 	transition: opacity 0.15s ease;
+	z-index: 99;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -10949,7 +11039,7 @@ img::-moz-selection {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	/*background-color: #212529;*/
-	background-color: #862A5C;
+	background-color: rgb(12, 1, 167);
 }
 
 #mainNav .navbar-toggler {
@@ -11008,7 +11098,7 @@ img::-moz-selection {
 	#mainNav.navbar-shrink {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-		background-color: rgb(105, 2, 59);
+		background-color: rgb(12, 1, 167);
 	}
 
 	#mainNav.navbar-shrink .navbar-brand {
@@ -11382,10 +11472,24 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-	background-color: #490478;
-	background-image: url("../assets/img/map-image.png");
+	background-color: rgb(12, 1, 167);
+	background-image: url("../img/map-image.png");
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+#contact .map-container {
+	overflow: hidden;
+	position: relative;
+	height: 0;
+}
+
+#contact .map-container iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
 }
 
 section#contact .section-heading {
